@@ -18,7 +18,7 @@ creds = Credentials.from_service_account_info(
 client = gspread.authorize(creds)
 
 # OPEN GOOGLE SHEET
-sheet = client.open("Material_Checklist_Control")
+sheet = client.open_by_key("1qU4zQucj2n9mTFDeZ_86PJndHM7B3nTEkW6M4x-CXdM")
 
 materials_ws = sheet.worksheet("Materials")
 submissions_ws = sheet.worksheet("Submissions")

@@ -47,6 +47,7 @@ technician = st.text_input("Technician")
 st.divider()
 
 st.subheader("Materials")
+st.info("If the material is not available, please enter 0 instead of leaving the field blank. / Se o material não estiver disponível, coloque 0 em vez de deixar em branco.")
 
 quantities = {}
 

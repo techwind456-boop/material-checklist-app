@@ -62,12 +62,10 @@ for index, row in materials_df.iterrows():
         st.write(row["Portuguese"])
 
     with col3:
-        qty = st.number_input(
-            f"qty_{index}",
-            min_value=0,
-            step=1,
-            label_visibility="collapsed"
-        )
+        qty = st.text_input(
+    label=f"qty_{index}",
+    key=f"qty_{index}"
+)
 
     quantities[row["Material_ID"]] = {
         "english": row["English"],
@@ -86,7 +84,7 @@ if st.button("Submit Checklist"):
 
     for material_id, data in quantities.items():
 
-        if data["qty"] > 0:
+      if str(data["qty"]).strip() != "":
 
             rows_to_insert.append([
                 timestamp,
